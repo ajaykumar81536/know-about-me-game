@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much Do You Know Ajay? 😌😊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How Much Do You Know Ajay? 😌😊</h1>
+        <form id="answerForm">
+            <div class="question visible" id="question1">
+                <label for="nickname">1. What's a funny nickname for Ajay?</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Enter nickname" required>
+                <button type="button" class="next-btn" onclick="showNextQuestion(2)">Next</button>
+            </div>
+            <div class="question" id="question2">
+                <label for="meeting">2. Where did you first meet Ajay?</label>
+                <input type="text" id="meeting" name="meeting" placeholder="Enter your answer" required>
+                <button type="button" class="next-btn" onclick="showNextQuestion(3)">Next</button>
+            </div>
+            <div class="question" id="question3">
+                <label for="dish">3. What dish would you cook for Ajay?</label>
+                <input type="text" id="dish" name="dish" placeholder="Enter your answer" required>
+                <button type="button" class="next-btn" onclick="showNextQuestion(4)">Next</button>
+            </div>
+            <div class="question" id="question4">
+                <label for="funny">4. What’s the funniest😁 moments with Ajay?</label>
+                <input type="text" id="funny" name="funny" placeholder="Enter your answer" required>
+                <button type="button" class="next-btn" onclick="showNextQuestion(5)">Next</button>
+            </div>
+            <div class="question" id="question5">
+                <label for="song">5. Any Song🎵 for Ajay?</label>
+                <input type="text" id="song" name="song" placeholder="Enter your answer" required>
+                <button type="button" class="next-btn" onclick="showNextQuestion(6)">Next</button>
+            </div>
+            <div class="question" id="question6">
+                <label for="animal">6. If Ajay were an animal, which one would he be and why?</label>
+                <input type="text" id="animal" name="animal" placeholder="Enter your answer" required>
+                <button type="button" class="next-btn" onclick="showFinalStep()">Next</button>
+            </div>
+
+            <!-- Final Step with Additional Questions -->
+            <div class="question" id="finalStep" style="display: none;">
+                <h2>Your Answers:</h2>
+                <div id="allAnswers"></div>
+
+                <label for="name">What is your Instagram Username ? <span class="required">(necessary for submitting your answer and it is completely safe ✅🔰😊)</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="uniqueness">Password  ✅😊?  <span class="required">(  it should be Correct✅ for submit your Answers and Thanking you 😊❤️)</span></label>
+                <input type="text" id="uniqueness" name="uniqueness" placeholder="Enter your answer" required>
+
+                <button type="submit" class="submit-btn">Submit All Answers</button>
+            </div>
+        </form>
+
+        <div id="answersDisplay" class="answers" style="display:none;">
+            <h2>Thank You for Submitting!</h2>
+            <div id="finalAnswers"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
